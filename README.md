@@ -4,7 +4,7 @@
 
 Before we jump into the specifics, let's begin with the basics. If you're new to TypeScript, start here to get an overview of what TypeScript is and how to set up your development environment.
 
-TypeScript Basics & Basic Types
+### [TypeScript Basics & Basic Types](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/TypeScript%20Basics%20%26%20Basic%20Types.md)
 In this section, we'll explore the fundamentals of TypeScript, including variables, data types, and basic type annotations. It's essential to get a strong foundation before diving into advanced topics.
 
 The TypeScript Compiler
