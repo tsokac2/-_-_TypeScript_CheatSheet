@@ -1,9 +1,9 @@
 <h1 align="center">Getting Started</h1>
 
 ## CONTEXT MENU
-What Is TypeScript & Why Should I Use It?
-Installing & Using TypeScript
-TypeScript Advantages - Overview
+- What Is TypeScript & Why Should I Use It?
+- Installing & Using TypeScript
+- TypeScript Advantages - Overview
 
 
 ### What Is TypeScript & Why Should I Use It?
