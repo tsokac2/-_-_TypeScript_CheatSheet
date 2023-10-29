@@ -4,6 +4,8 @@
 * **[What Is TypeScript and Why Should I Use It](#What-Is-TypeScript-and-Why-Should-I-Use-It)**
 * **[Installing and Using TypeScript](#Installing-and-Using-TypeScript)**
 * **[TypeScript Advantages Overview](#TypeScript-Advantages-Overview)**
+
+
 #
 ### What Is TypeScript and Why Should I Use It
 
@@ -42,6 +44,8 @@ TypeScript allows you to gradually adopt type checking in your JavaScript code. 
 TypeScript code can be transpiled into regular JavaScript, which means you can use TypeScript in both frontend and backend development. It's versatile and doesn't lock you into a specific ecosystem.
 
 In summary, TypeScript offers numerous advantages in terms of code quality, developer productivity, and code safety. It's an excellent choice for both small and large projects, and with its compatibility with popular frameworks, it's a valuable skill for any web developer, including someone in your role as an API Integration Engineer.
+
+**[Back To The Top](#Overview-of-the-Section)**
 #
 
 ### Installing and Using TypeScript
@@ -86,6 +90,8 @@ Now, you can run the generated JavaScript code with Node.js:
 ```node app.js``` - You should see the output "Hello, Tomislav!" in your terminal.
 
 This is a basic introduction to using TypeScript. You can explore TypeScript's extensive features, including type annotations, interfaces, and modules, to take full advantage of this powerful language in your work as an API Integration Engineer. If you have any specific questions or need further guidance, feel free to ask.
+
+**[Back To The Top](#Overview-of-the-Section)**
 #
 
 ### TypeScript Advantages Overview
@@ -127,6 +133,8 @@ The use of TypeScript often results in higher code quality and maintainability. 
 TypeScript's type inference can save you from explicitly specifying types for every variable. It can infer types from the context, reducing the verbosity of your code.
 
 In summary, TypeScript combines the flexibility of JavaScript with the benefits of static typing. It enhances code quality, developer productivity, and the long-term maintainability of projects. Whether you're building a small web application or a large-scale enterprise system, TypeScript's advantages can make your development process more efficient and reliable.
+
+**[Back To The Top](#Overview-of-the-Section)**
 #
 
 ### 
