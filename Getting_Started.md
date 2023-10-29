@@ -1,11 +1,11 @@
 <h1 align="center">Getting Started</h1>
 
 ### Overview of the Section
-* **[What Is TypeScript & Why Should I Use It?](#What-Is-TypeScript-&-Why-Should-I-Use-It?)**
-* **[Installing & Using TypeScript](#Installing-&-Using-TypeScript)**
-* **[TypeScript Advantages - Overview](#TypeScript-Advantages-Overview)**
+* **[What Is TypeScript and Why Should I Use It](#What-Is-TypeScript-and-Why-Should-I-Use-It)**
+* **[Installing and Using TypeScript](#Installing-and-Using-TypeScript)**
+* **[TypeScript Advantages Overview](#TypeScript-Advantages-Overview)**
 #
-### What Is TypeScript & Why Should I Use It?
+### What Is TypeScript and Why Should I Use It
 
 TypeScript is a statically typed superset of JavaScript that brings several advantages to web developers, especially those working on complex and large-scale projects. 
 
@@ -44,7 +44,7 @@ TypeScript code can be transpiled into regular JavaScript, which means you can u
 In summary, TypeScript offers numerous advantages in terms of code quality, developer productivity, and code safety. It's an excellent choice for both small and large projects, and with its compatibility with popular frameworks, it's a valuable skill for any web developer, including someone in your role as an API Integration Engineer.
 #
 
-### Installing & Using TypeScript
+### Installing and Using TypeScript
 
 #### Step 1: Install Node.js
 TypeScript requires Node.js to run. You can download Node.js from the official website for your platform (Windows, macOS, or Linux). Once installed, you'll have access to the Node Package Manager (npm) that you'll need for TypeScript and other packages.
@@ -88,7 +88,7 @@ Now, you can run the generated JavaScript code with Node.js:
 This is a basic introduction to using TypeScript. You can explore TypeScript's extensive features, including type annotations, interfaces, and modules, to take full advantage of this powerful language in your work as an API Integration Engineer. If you have any specific questions or need further guidance, feel free to ask.
 #
 
-### TypeScript Advantages - Overview
+### TypeScript Advantages Overview
 
 #### Static Typing: 
 TypeScript introduces static typing to JavaScript, which means you can specify data types for variables. This helps catch type-related errors at compile-time, leading to more robust and maintainable code.
