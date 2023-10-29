@@ -1,11 +1,10 @@
 <h1 align="center">Getting Started</h1>
 
-## CONTEXT MENU
-- What Is TypeScript & Why Should I Use It?
-- Installing & Using TypeScript
-- TypeScript Advantages - Overview
-
-
+### Overview of the Section
+* **[What Is TypeScript & Why Should I Use It?](#What-Is-TypeScript-&-Why-Should-I-Use-It?)**
+* **[Installing & Using TypeScript](#Installing-&-Using-TypeScript)**
+* **[TypeScript Advantages - Overview](#TypeScript-Advantages-Overview)**
+#
 ### What Is TypeScript & Why Should I Use It?
 
 TypeScript is a statically typed superset of JavaScript that brings several advantages to web developers, especially those working on complex and large-scale projects. 
