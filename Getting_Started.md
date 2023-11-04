@@ -4,6 +4,7 @@
 * **[What Is TypeScript and Why Should I Use It](#What-Is-TypeScript-and-Why-Should-I-Use-It)**
 * **[Installing and Using TypeScript](#Installing-and-Using-TypeScript)**
 * **[TypeScript Advantages Overview](#TypeScript-Advantages-Overview)**
+* **[Setting up Lite Server](#Setting-up-Lite-Server)**
 
 
 #
@@ -137,4 +138,50 @@ In summary, TypeScript combines the flexibility of JavaScript with the benefits 
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### 
+### Setting up Lite Server
+
+#### Prerequisites:
+Before setting up Lite Server, ensure that you have Node.js and npm (Node Package Manager) installed on your system. You can check if they're installed by running the following commands in your terminal:
+```
+node -v
+npm -v
+```
+If they are not installed, you can download and install them from the official website: https://nodejs.org/
+
+#### Create Your Project:
+Assuming you have a project folder set up, navigate to your project directory in your terminal.
+
+#### Initialize Your Project:
+If your project is not already an npm project, you can initialize it by running the following command and following the prompts:
+
+```npm init```
+
+#### Install Lite Server:
+Now, you need to install Lite Server as a development dependency in your project. Run the following command in your terminal:
+
+```npm install lite-server --save-dev```
+
+#### Define Scripts:
+In your package.json file, add scripts for starting Lite Server. Update the "scripts" section to include the following:
+
+```
+"scripts": {
+  "start": "lite-server"
+}
+```
+
+#### Start Lite Server:
+To start Lite Server, run the following command in your terminal:
+
+``` npm start```
+
+Lite Server should start, and your web application will be available at the specified base directory.
+
+#### Access Your Project:
+Open a web browser and go to http://localhost:3000. You should be able to access your web application, and Lite Server will automatically refresh the page when you make changes to your files.
+
+Lite Server is a convenient tool for web development, making it easier to test and develop your web applications. 
+
+It's especially helpful for single-page applications (SPAs) and quick prototyping.
+
+ Make sure to configure it according to your project's needs, and you'll have a reliable development server at your disposal.
