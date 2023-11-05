@@ -4,7 +4,7 @@
 * **[TypeScript Core Types](#TypeScript-Core-Types)**
 * **[TypeScript Types vs JavaScript Types](#TypeScript-Types-vs-JavaScript-Types)**
 * **[Difference between Runtime and Development](#Difference-between-Runtime-and-Development)**
-* **[Working with Numbers, Strings and Booleans](#Working-with-Numbers,-Strings-and-Booleans)**
+* **[Working with Numbers Strings and Booleans](#Working-with-Numbers-Strings-and-Booleans)**
 * **[Type Assignment and Type Inference](#Type-Assignment-and-Type-Inference)**
 
 #
@@ -123,7 +123,7 @@ These two phases are interconnected, with issues identified during runtime often
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### Working with Numbers, Strings and Booleans
+### Working with Numbers Strings and Booleans
 In TypeScript, you can work with numbers, strings, and booleans just like in many other programming languages.
 
 #### Working with Numbers:
