@@ -6,6 +6,7 @@
 * **[Difference between Runtime and Development](#Difference-between-Runtime-and-Development)**
 * **[Working with Numbers Strings and Booleans](#Working-with-Numbers-Strings-and-Booleans)**
 * **[Type Assignment and Type Inference](#Type-Assignment-and-Type-Inference)**
+* **[Object Types](#Object-Types)**
 
 #
 ### TypeScript Core Types
@@ -209,11 +210,113 @@ It's important to note that while type inference can make your code more concise
 **[Back To The Top](#Overview-of-the-Section)**
 
 #
-###
+### 
 
+Object types in TypeScript refer to how you define and specify the structure of objects and their properties in your code. This is essential for achieving type safety and preventing runtime errors. TypeScript provides several ways to work with object types:
 
+#### Nested Objects and Types
+Of course object types can also be created for nested objects.
 
+Let's say you have this JavaScript object:
+```
 
+const product = {
+  id: 'abc1',
+  price: 12.99,
+  tags: ['great-offer', 'hot-and-new'],
+  details: {
+    title: 'Red Carpet',
+    description: 'A great carpet - almost brand-new!'
+  }
+}
+```
 
+This would be the type of such an object:
+```
+{
+  id: string;
+  price: number;
+  tags: string[];
+  details: {
+    title: string;
+    description: string;
+  }
+}
+```
+So you have an object type in an object type so to say.
 
+#
+### Object Types
 
+Object types in TypeScript refer to how you define and specify the structure of objects and their properties in your code. This is essential for achieving type safety and preventing runtime errors. 
+
+TypeScript provides several ways to work with object types:
+
+#### Object Literal Types
+You can define object types directly using object literals. For example:
+```
+let person: { name: string; age: number } = {
+  name: "Tomislav",
+  age: 30
+};
+```
+In this example, we've defined an object type for a person with a name property of type string and an age property of type number.
+
+#### Interface
+Interfaces are a powerful tool in TypeScript for defining the shape of objects. 
+They allow you to declare a contract that objects must adhere to. For instance:
+```
+interface Person {
+  name: string;
+  age: number;
+}
+
+let person: Person = {
+  name: "Tomislav",
+  age: 30
+};
+```
+Interfaces make your code more maintainable and allow you to ensure that objects conform to a specific structure.
+
+#### Class Types
+You can use classes to define object types, which encapsulate both the structure and behavior of an object.
+```
+class Person {
+  constructor(public name: string, public age: number) {}
+}
+
+let tomislav: Person = new Person("Tomislav", 30);
+```
+In this case, the Person class defines an object type, and you create instances of it.
+
+#### Type Aliases
+You can create custom type aliases using the type keyword to simplify complex type definitions. For example:
+```
+type Point = { x: number; y: number };
+
+let origin: Point = { x: 0, y: 0 };
+```
+Type aliases make your code more readable by providing meaningful names for complex types.
+
+#### Index Signatures
+
+TypeScript allows you to define objects with dynamic property names using index signatures. 
+This is useful when you don't know all property names in advance.
+```
+interface Dictionary {
+  [key: string]: string;
+}
+
+let dict: Dictionary = {
+  key1: "value1",
+  key2: "value2"
+};
+```
+In this case, the object can have any string keys with string values.
+
+In summary, object types in TypeScript give you the flexibility to define and enforce the structure of objects in your code, making it more predictable and safer. The choice of which method to use depends on your specific use case and coding style.
+
+**[Back To The Top](#Overview-of-the-Section)**
+
+#
+### 
