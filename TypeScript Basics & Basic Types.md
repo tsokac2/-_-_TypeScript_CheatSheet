@@ -7,6 +7,7 @@
 * **[Working with Numbers Strings and Booleans](#Working-with-Numbers-Strings-and-Booleans)**
 * **[Type Assignment and Type Inference](#Type-Assignment-and-Type-Inference)**
 * **[Object Types](#Object-Types)**
+* **[Arrays Types](#Arrays-Types)**
 
 #
 ### TypeScript Core Types
@@ -319,4 +320,4 @@ In summary, object types in TypeScript give you the flexibility to define and en
 **[Back To The Top](#Overview-of-the-Section)**
 
 #
-### 
+### Arrays Types
