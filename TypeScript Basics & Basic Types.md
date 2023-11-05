@@ -246,6 +246,7 @@ This would be the type of such an object:
 ```
 So you have an object type in an object type so to say.
 
+**[Back To The Top](#Overview-of-the-Section)**
 #
 ### Object Types
 
@@ -319,5 +320,4 @@ In summary, object types in TypeScript give you the flexibility to define and en
 
 **[Back To The Top](#Overview-of-the-Section)**
 
-#
 ### Arrays Types
