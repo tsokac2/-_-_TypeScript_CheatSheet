@@ -4,6 +4,8 @@
 * **[TypeScript Core Types](#TypeScript-Core-Types)**
 * **[TypeScript Types vs JavaScript Types](#TypeScript-Types-vs-JavaScript-Types)**
 * **[Difference between Runtime and Development](#Difference-between-Runtime-and-Development)**
+* **[Working with Numbers, Strings and Booleans](#Working-with-Numbers,-Strings-and-Booleans)**
+* **[Type Assignment and Type Inference](#Type-Assignment-and-Type-Inference)**
 
 #
 ### TypeScript Core Types
@@ -120,3 +122,98 @@ These two phases are interconnected, with issues identified during runtime often
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
+
+### Working with Numbers, Strings and Booleans
+In TypeScript, you can work with numbers, strings, and booleans just like in many other programming languages.
+
+#### Working with Numbers:
+```
+// Declare a number variable
+let age: number = 30;
+
+// Perform arithmetic operations
+let sum = age + 5;
+let product = age * 2;
+let division = age / 3;
+
+// Increment and decrement
+age++; // Increment age by 1
+age--; // Decrement age by 1
+```
+#### Working with Strings:
+```
+// Declare a string variable
+let name: string = "Tomislav";
+
+// String concatenation
+let greeting = "Hello, " + name;
+
+// String interpolation using template literals
+let message = `Welcome, ${name}!`;
+
+// String length
+let nameLength = name.length;
+
+// Access characters in a string
+let firstChar = name[0]; // Access the first character
+```
+
+#### Working with Booleans:
+```
+// Declare boolean variables
+let isOnline: boolean = true;
+let hasAccount: boolean = false;
+
+// Conditional statements
+if (isOnline) {
+    console.log("User is online.");
+} else {
+    console.log("User is offline.");
+}
+
+// Logical operators
+let result = isOnline && hasAccount; // AND operator
+let oppositeResult = !isOnline; // NOT operator
+```
+
+These examples demonstrate how to work with numbers, strings, and booleans in TypeScript. 
+
+TypeScript provides type checking and static analysis, which can help catch errors at compile time and make your code more robust and maintainable.
+
+**[Back To The Top](#Overview-of-the-Section)**
+
+#
+### Type Assignment and Type Inference
+
+#### Type Assignment in TypeScript
+Type assignment in TypeScript refers to explicitly specifying the data type of a variable, parameter, or return value when you declare a variable or define a function. 
+
+This is done using TypeScript's type annotations. 
+
+For example: ```let age: number = 30;```
+
+In the above code, age is explicitly assigned the number type. This means it can only store numeric values.
+
+#### Type Inference in TypeScript:
+Type inference, on the other hand, is TypeScript's ability to automatically determine the data type of a variable based on the value assigned to it. 
+You don't need to explicitly specify the type; TypeScript infers it for you. 
+
+For instance: ```let name = "Tomislav";```
+
+Here, TypeScript infers that name is of type string because it is assigned a string value.
+
+Type inference is a powerful feature in TypeScript that allows for more concise and readable code. It is especially handy when dealing with complex data structures and function return types. TypeScript's type inference is often based on the initial value assigned and how the variable or function is used in the code.
+
+It's important to note that while type inference can make your code more concise, there are situations where explicitly specifying types (type assignment) can provide clarity and help catch errors early in development.
+
+**[Back To The Top](#Overview-of-the-Section)**
+
+#
+###
+
+
+
+
+
+
+
