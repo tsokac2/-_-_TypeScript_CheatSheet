@@ -8,6 +8,8 @@
 * **[Type Assignment and Type Inference](#Type-Assignment-and-Type-Inference)**
 * **[Object Types](#Object-Types)**
 * **[Arrays Types](#Arrays-Types)**
+* **[Working with Tuples](#Working-with-Tuples)**
+
 
 #
 ### TypeScript Core Types
@@ -319,5 +321,41 @@ In this case, the object can have any string keys with string values.
 In summary, object types in TypeScript give you the flexibility to define and enforce the structure of objects in your code, making it more predictable and safer. The choice of which method to use depends on your specific use case and coding style.
 
 **[Back To The Top](#Overview-of-the-Section)**
-
+#
 ### Arrays Types
+
+In TypeScript, arrays can be of various types, allowing you to work with data in a strongly typed manner. 
+Here are some commonly used array types:
+
+#### Typed Arrays
+TypeScript allows you to create arrays with specific element types, ensuring type safety. For example, you can create an array of strings like this:
+```
+let names: string[] = ["Tomislav", "John", "Alice"];
+```
+This ensures that only strings can be stored in the names array.
+
+#### Tuple Types
+TypeScript introduces tuples, which are fixed-length arrays where each element can have a different type. Here's an example:
+```
+let employee: [string, number] = ["Tomislav", 30];
+```
+Tuples are useful when you need to represent a fixed structure, such as a pair of values.
+
+#### Array Union Types
+You can also create arrays that can hold multiple types using union types. For example:
+```
+let values: (string | number)[] = ["Tomislav", 42, "Alice"];
+```
+
+#### Array Type Inference
+TypeScript can often infer the array type based on the values you initialize it with. For instance:
+```
+let colors = ["red", "green", "blue"];
+// TypeScript infers `colors` as an array of strings: string[]
+```
+This type safety ensures that you don't accidentally insert the wrong type of data into your arrays, making your code more robust.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+### Working with Tuples
+
