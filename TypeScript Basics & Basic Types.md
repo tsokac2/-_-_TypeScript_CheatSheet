@@ -439,4 +439,4 @@ In this case, Color.Red would be 1, Color.Green would be 2, and so on. This is p
 **[Back To The Top](#Overview-of-the-Section)**
 
 #
-### The any Typ
+### The any Type
