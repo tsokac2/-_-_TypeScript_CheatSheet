@@ -10,7 +10,7 @@
 * **[Arrays Types](#Arrays-Types)**
 * **[Working with Tuples](#Working-with-Tuples)**
 * **[Working with Enums](#Working-with-Enums)**
-* **[The "any" Type](#The-"any"-Type)**
+* **[The "any" Type](#The-/"any"/-Type)**
 
 
 
