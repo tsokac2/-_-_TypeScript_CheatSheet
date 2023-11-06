@@ -10,6 +10,9 @@
 * **[Arrays Types](#Arrays-Types)**
 * **[Working with Tuples](#Working-with-Tuples)**
 * **[Working with Enums](#Working-with-Enums)**
+* **[The "any" Type](#The-"any"-Type)**
+
+
 
 
 #
@@ -401,3 +404,39 @@ let myRestTuple: [string, number, ...string[]] = ['Tomislav', 30, 'Dublin', 'Ire
 
 #
 ### Working with Enums
+ Working with Enums in TypeScript is an essential aspect of building type-safe and maintainable code. Enums, short for "enumerations," are a way to define a set of named constants. 
+ 
+ They allow you to assign symbolic names to a group of values, which can be more human-readable and self-explanatory than raw values. Here's a detailed explanation of working with Enums in TypeScript:
+
+#### Enum Declaration
+To define an Enum in TypeScript, you use the enum keyword followed by the name of the Enum, like this:
+```
+enum Days {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday
+}
+```
+In this example, Days is an Enum representing the days of the week, and the values are automatically assigned numeric indices starting from 0.
+#### Accessing Enum Members
+You can access Enum members using the dot notation:
+```
+let today: Days = Days.Wednesday;
+```
+#### Enum Values
+By default, Enum members are assigned numeric values starting from 0. However, you can specify custom values:
+```
+enum Color {
+    Red = 1,
+    Green = 2,
+    Blue = 4
+}
+```
+In this case, Color.Red would be 1, Color.Green would be 2, and so on. This is particularly useful when dealing with bit flags.
+
+**[Back To The Top](#Overview-of-the-Section)**
+
+#
+### The "any" Typ
