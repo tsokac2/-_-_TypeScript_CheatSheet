@@ -9,6 +9,7 @@
 * **[Object Types](#Object-Types)**
 * **[Arrays Types](#Arrays-Types)**
 * **[Working with Tuples](#Working-with-Tuples)**
+* **[Working with Enums](#Working-with-Enums)**
 
 
 #
@@ -359,3 +360,44 @@ This type safety ensures that you don't accidentally insert the wrong type of da
 #
 ### Working with Tuples
 
+Tuples are a data structure that allows you to store a fixed number of elements with different data types in a specific order. 
+ 
+They can be particularly handy when you need to work with collections of values where each element has a well-defined purpose.
+
+#### Tuple Declaration
+To create a tuple in TypeScript, you declare it using square brackets [] and specify the data types for each element within. For example:
+```
+let myTuple: [string, number] = ['Tomislav', 30];
+```
+#### Accessing Elements
+You can access elements of a tuple using indexing, just like with arrays. 
+TypeScript enforces that you access elements with the correct data types, which is helpful for maintaining type safety. For instance:
+```
+let name: string = myTuple[0]; // 'Tomislav'
+let age: number = myTuple[1];  // 30
+```
+#### Fixed Length
+Tuples have a fixed length, which means you cannot add or remove elements after the tuple is created. This constraint is beneficial when you need a strict structure for your data.
+#### Array-like Operations
+You can perform array-like operations on tuples, such as looping through them, iterating using for...of, or using the forEach method.
+```
+for (let item of myTuple) {
+    console.log(item);
+}
+```
+#### Tuple Unpacking
+TypeScript allows you to use destructuring to assign tuple elements to individual variables
+```
+let [name, age] = myTuple;
+```
+This can make your code more readable and concise.
+#### Optional and Rest Elements
+TypeScript supports optional elements and rest elements in tuples. An optional element can be defined using the ? notation, and the rest element using the ... notation. For example:
+```
+let myOptionalTuple: [string, number?] = ['Tomislav'];
+let myRestTuple: [string, number, ...string[]] = ['Tomislav', 30, 'Dublin', 'Ireland'];
+```
+**[Back To The Top](#Overview-of-the-Section)**
+
+#
+### Working with Enums
