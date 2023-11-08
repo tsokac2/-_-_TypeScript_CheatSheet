@@ -11,8 +11,7 @@
 * **[Working with Tuples](#Working-with-Tuples)**
 * **[Working with Enums](#Working-with-Enums)**
 * **[Union Types](#Union-Types)**
-
-
+* **[Literal Types](#Literal-Types)**
 
 
 #
@@ -440,3 +439,32 @@ In this case, Color.Red would be 1, Color.Green would be 2, and so on. This is p
 
 #
 ### Union Types
+
+ Union types in TypeScript are a powerful feature that allows you to define a variable or parameter that can hold values of multiple types. 
+ 
+ They provide flexibility in scenarios where a particular piece of data can be of different data types, such as strings, numbers, or custom objects. 
+ 
+ By using union types, you can explicitly specify all the possible types that a variable can have.
+
+ Here's an example to illustrate union types:
+
+ ```
+ function displayResult(value: number | string) {
+    console.log(`Result: ${value}`);
+}
+
+displayResult(42);       // Valid, as it's a number
+displayResult("Hello");  // Valid, as it's a string
+displayResult(true);     // Error, as it's not part of the union type
+```
+
+In the above code, the value parameter can accept both number and string types, indicated by the union type number | string. 
+
+This flexibility is beneficial because it allows you to handle different data types while maintaining type safety.
+
+Union types are particularly useful in situations where you want to accept multiple types of inputs or when working with libraries that return different types based on certain conditions. They help in making your code more expressive and self-documenting. However, keep in mind that you need to handle the different possible types properly within your functions or methods to avoid runtime errors.
+
+**[Back To The Top](#Overview-of-the-Section)**
+
+#
+### Literal Types
