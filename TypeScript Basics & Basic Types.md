@@ -12,6 +12,7 @@
 * **[Working with Enums](#Working-with-Enums)**
 * **[Union Types](#Union-Types)**
 * **[Literal Types](#Literal-Types)**
+* **[Type Aliases Custom Types](#Type-Aliases-Custom-Types)**
 
 
 #
@@ -403,9 +404,9 @@ let myRestTuple: [string, number, ...string[]] = ['Tomislav', 30, 'Dublin', 'Ire
 
 #
 ### Working with Enums
- Working with Enums in TypeScript is an essential aspect of building type-safe and maintainable code. Enums, short for "enumerations," are a way to define a set of named constants. 
+Working with Enums in TypeScript is an essential aspect of building type-safe and maintainable code. Enums, short for "enumerations," are a way to define a set of named constants. 
  
- They allow you to assign symbolic names to a group of values, which can be more human-readable and self-explanatory than raw values. Here's a detailed explanation of working with Enums in TypeScript:
+They allow you to assign symbolic names to a group of values, which can be more human-readable and self-explanatory than raw values. Here's a detailed explanation of working with Enums in TypeScript:
 
 #### Enum Declaration
 To define an Enum in TypeScript, you use the enum keyword followed by the name of the Enum, like this:
@@ -468,3 +469,93 @@ Union types are particularly useful in situations where you want to accept multi
 
 #
 ### Literal Types
+
+ Literal types in TypeScript are a fascinating feature that allows you to specify exact values that a variable can hold. 
+ 
+ They are particularly useful when you want to restrict a variable to a fixed set of values, making your code more type-safe and self-explanatory.
+
+ #### String Literal Types 
+ These restrict a variable to only one specific string value. For example, you can define a variable like this:
+ ```
+ let direction: "up" | "down" | "left" | "right";
+ ```
+Here, 'direction' can only hold one of the four specified string values, making it very clear and strict in its usage.
+
+#### Numeric Literal Types
+These are similar to string literal types but for numeric values. For instance:
+```
+let diceRoll: 1 | 2 | 3 | 4 | 5 | 6;
+```
+'diceRoll' can only be assigned one of the six specified numeric values.
+
+#### Boolean Literal Types
+These restrict a variable to either true or false:
+```
+let isDone: true;
+```
+In this case, isDone can only be true.
+
+Literal types are incredibly valuable because they provide compile-time checks, ensuring that your code is more reliable and less error-prone. 
+
+They also enhance code readability, as anyone reading the code can immediately understand the allowed values for a variable.
+
+Additionally, literal types are often used in conjunction with union types, allowing you to create complex type structures that represent various scenarios in your application.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+### Type Aliases Custom Types
+
+Type aliases, also known as custom types in TypeScript, are a powerful feature that allows you to create your own custom data types by combining existing types. 
+ 
+These custom types make your code more readable, maintainable, and provide strong typing, which helps catch errors at compile-time.
+
+Type aliases are typically created using the type keyword, and they can be used to define various types of structures:
+
+#### Basic Types
+You can create an alias for basic types like strings, numbers, or booleans. For example:
+```
+type MyString = string;
+type Age = number;
+type IsEmployee = boolean;
+```
+
+#### Object Types
+Type aliases are commonly used to describe complex object structures. For instance:
+```
+type Person = {
+  name: string;
+  age: number;
+};
+
+type Point = {
+  x: number;
+  y: number;
+};
+```
+#### Union Types
+You can combine multiple types using union (|) to create more flexible type definitions. For instance:
+```
+type Result = string | number;
+type Status = "success" | "failure";
+```
+
+#### Intersection Types
+With intersection (&), you can merge multiple types into one. This is useful for combining features from different types:
+```
+type Admin = {
+  role: "admin";
+  permissions: string[];
+};
+
+type Employee = {
+  role: "employee";
+  department: string;
+};
+
+type AdminEmployee = Admin & Employee;
+```
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+###
