@@ -13,7 +13,7 @@
 * **[Union Types](#Union-Types)**
 * **[Literal Types](#Literal-Types)**
 * **[Type Aliases Custom Types](#Type-Aliases-Custom-Types)**
-* **[Function Return Types and "void"](#Function-Return-Types-and-%34void%34)**
+* **[Function Return Types and "void"](#Function-Return-Types-and-\"void\")**
 
 
 
