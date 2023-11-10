@@ -14,11 +14,7 @@
 * **[Literal Types](#Literal-Types)**
 * **[Type Aliases Custom Types](#Type-Aliases-Custom-Types)**
 * **[Function Return Types and "void"](#Function-Return-Types-and-void)**
-
-
-
-
-
+* **[Functions as Types](#Functions-as-Types)**
 
 
 #
@@ -565,3 +561,31 @@ type AdminEmployee = Admin & Employee;
 #
 
 ### Function Return Types and \"void\"
+
+For example, consider a function that adds two numbers:
+```
+function add(a: number, b: number): number {
+    return a + b;
+}
+```
+
+In this case, the return type is number, indicating that the function will return a numeric value.
+
+Now, let's discuss the use of "void" as a return type. 
+When a function doesn't return any value, its return type is specified as "void". 
+
+This is common for functions that perform an action but don't produce a result that needs to be used elsewhere in the program.
+
+Here's an example:
+```
+function logMessage(message: string): void {
+    console.log(message);
+}
+```
+
+In this function, the return type is explicitly set to "void" because it logs a message to the console but doesn't return any value.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### Functions as Types
