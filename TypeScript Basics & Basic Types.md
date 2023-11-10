@@ -13,6 +13,10 @@
 * **[Union Types](#Union-Types)**
 * **[Literal Types](#Literal-Types)**
 * **[Type Aliases Custom Types](#Type-Aliases-Custom-Types)**
+* **[Function Return Types and "void"](#Function-Return-Types-and-"void")**
+
+
+
 
 
 #
@@ -558,4 +562,4 @@ type AdminEmployee = Admin & Employee;
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-###
+### Function Return Types and "void"
