@@ -15,7 +15,7 @@
 * **[Type Aliases Custom Types](#Type-Aliases-Custom-Types)**
 * **[Function Return Types and "void"](#Function-Return-Types-and-void)**
 * **[Functions as Types](#Functions-as-Types)**
-* **[Function Types /&/ Callbacks](#Function-Types-&-Callbacks)**
+* **[Function Types & Callbacks](#Function-Types-&-Callbacks)**
 
 
 #
