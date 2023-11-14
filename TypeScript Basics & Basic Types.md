@@ -622,7 +622,7 @@ type CombinedFunction = MathOperation | StringConcatenation;
 
 By using Functions as Types, TypeScript provides a powerful mechanism for defining and enforcing function signatures throughout your codebase, contributing to improved type safety and code clarity.
 
-#
 **[Back To The Top](#Overview-of-the-Section)**
+#
 
 ### Function Types & Callbacks
