@@ -589,3 +589,38 @@ In this function, the return type is explicitly set to "void" because it logs a 
 #
 
 ### Functions as Types
+
+Functions as Types is a concept that allows you to define the type of a function separately from its implementation. 
+
+This can be useful in scenarios where you want to enforce a specific signature for functions, especially when they are passed as parameters or assigned to variables.
+
+Here's a breakdown of how Functions as Types work in TypeScript:
+
+#### Function Type Declaration
+You can declare a function type using the type keyword or the interface keyword. For example:
+```
+type MathOperation = (a: number, b: number) => number;
+```
+This declares a type MathOperation that represents a function taking two parameters of type number and returning a number.
+
+#### Using Function Types
+Once you've declared a function type, you can use it to define variables or parameters:
+```
+let add: MathOperation = (a, b) => a + b;
+```
+This ensures that the add variable must be a function that adheres to the MathOperation type.
+
+#### Combining Function Types
+TypeScript allows you to combine function types using union (|) or intersection (&) types. This can be useful when dealing with multiple function signatures.
+```
+type MathOperation = (a: number, b: number) => number;
+type StringConcatenation = (x: string, y: string) => string;
+
+type CombinedFunction = MathOperation | StringConcatenation;
+```
+
+By using Functions as Types, TypeScript provides a powerful mechanism for defining and enforcing function signatures throughout your codebase, contributing to improved type safety and code clarity.
+
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
