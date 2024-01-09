@@ -17,6 +17,8 @@
 * **[Functions as Types](#Functions-as-Types)**
 * **[Function Types and Callbacks](#function-types-and-callbacks)**
 * **[Quiz Function and Types](#quiz-function-and-types)**
+* **[unknown type](#unknown-type)**
+* **[never type](#never-type)**
 
 
 
@@ -709,9 +711,75 @@ function sayHi(): undefined {
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
+### unknown type
 
+In TypeScript, the "unknown" type is a type-safe counterpart of the "any" type. While the "any" type allows for any value to be assigned to a variable, essentially opting out of type checking, the "unknown" type is more restrictive and provides a safer alternative.
 
+When a variable is of type "unknown," TypeScript requires you to perform some form of type checking before you can operate on that variable. 
 
+This ensures that you explicitly handle the potential variability in the type of the value. This is in contrast to the "any" type, where you can freely perform any operations without TypeScript checking for type consistency.
+
+Here's an example:
+```
+let userInput: unknown;
+
+// Without type checking, you'd get a compilation error
+// because TypeScript doesn't know the type of userInput.
+// For example, trying to use it as a string directly would result in an error.
+// console.log(userInput.length); // Error
+
+// Type checking is required before using the value.
+if (typeof userInput === 'string') {
+    console.log(userInput.length); // Okay, TypeScript now knows it's a string
+} else {
+    console.log('User input is not a string.');
+}
+```
+
+In this example, you have to explicitly check the type of **userInput** before trying to use it as a string. This adds a layer of safety compared to using the "any" type, where TypeScript would not provide any type-related feedback.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### never type
+
+In TypeScript, the "never" type represents values that never occur. It is often used in scenarios where a function never returns or when an exception is always thrown.
+
+Here are a couple of common use cases for the **never** type:
+
+#### 1. Function that never returns:
+
+```
+function throwError(message: string): never {
+    throw new Error(message);
+}
+```
+In this example, the function throwError is declared to have a return type of "never" because it never completes its execution normally. Instead, it throws an error, and the control flow is disrupted.
+
+#### 2. Discriminated unions:
+
+```
+type Fruit = { type: 'apple'; color: string } | { type: 'banana'; length: number } | { type: 'orange'; radius: number };
+
+function getFruitInfo(fruit: Fruit): string {
+    switch (fruit.type) {
+        case 'apple':
+            return `Apple, color: ${fruit.color}`;
+        case 'banana':
+            return `Banana, length: ${fruit.length}`;
+        case 'orange':
+            return `Orange, radius: ${fruit.radius}`;
+        default:
+            // The "never" type is inferred here, as all possible cases are covered
+            const _exhaustiveCheck: never = fruit;
+            return _exhaustiveCheck;
+    }
+}
+```
+
+In the above example, the "never" type is used to handle exhaustiveness checking. If there's a new fruit type added in the future, TypeScript will raise an error in the default case, ensuring that all possible cases are covered.
+
+Using the "never" type in these contexts helps TypeScript catch potential issues during development, making the code more robust and less error-prone.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
