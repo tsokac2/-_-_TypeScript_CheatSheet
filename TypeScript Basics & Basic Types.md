@@ -15,7 +15,9 @@
 * **[Type Aliases Custom Types](#Type-Aliases-Custom-Types)**
 * **[Function Return Types and "void"](#Function-Return-Types-and-void)**
 * **[Functions as Types](#Functions-as-Types)**
-* **[Function Types and Callbacks](#Function-Types-and-Callbacks)**
+* **[Function Types and Callbacks](#function-types-and-callbacks)**
+* **[Quiz Function and Types](#quiz-function-and-types)**
+
 
 
 #
@@ -626,3 +628,90 @@ By using Functions as Types, TypeScript provides a powerful mechanism for defini
 #
 
 ### Function Types and Callbacks
+
+#### Function Types
+In TypeScript, you can define a function type using the following syntax:
+```
+type MyFunctionType = (param1: Type1, param2: Type2) => ReturnType;
+```
+Here, **MyFunctionType** is a custom name for the function type, **param1** and **param2** are parameters with their respective types (**Type1** and **Type2**), and **ReturnType** is the type of the value the function returns.
+
+#### Callbacks
+Now, callbacks are functions passed as arguments to other functions. They are commonly used in asynchronous operations, event handling, and more. TypeScript allows you to define the structure of a callback using function types.
+
+Here's an example:
+
+```
+type MyCallback = (result: string) => void;
+
+function performAsyncOperation(callback: MyCallback) {
+    // Simulating an asynchronous operation
+    setTimeout(() => {
+        const result = "Operation completed";
+        callback(result);
+    }, 1000);
+}
+
+// Using the callback
+performAsyncOperation((result) => {
+    console.log(result);
+});
+```
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+
+### Quiz Function and Types
+
+#### Question 1:
+Will this code compile?
+```
+function sendRequest(data: string, cb: (response: any) => void) {
+  // ... sending a request with "data"
+  return cb({data: 'Hi there!'});
+}
+ 
+sendRequest('Send this!', (response) => { 
+  console.log(response);
+  return true;
+ });
+```
+
+Yes, That's correct. As you learned, callback functions can return something, even if the argument on which they're passed does NOT expect a returned value.
+
+#### Question 2:
+What's the idea behind a "function type"?
+
+Function types define the parameters and return type of a function.
+
+#### Question 3:
+Which code snippet is better (i.e. which code should you write)?
+
+```
+// 1.
+
+function sayHi(): void {
+  // ...
+}
+```
+OR
+
+```
+// 2.
+
+function sayHi(): undefined {
+  // ...
+}
+```
+
+**1** - because it doesn't force you to return anything if you don't want to return something.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+
+
+
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
