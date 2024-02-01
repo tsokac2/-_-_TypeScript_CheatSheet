@@ -74,7 +74,7 @@ When you set **"sourceMap": true**, you instruct the TypeScript compiler to gene
 
 **Advantages**: Readable Debugging: Source maps provide a seamless debugging experience by allowing developers to work with the original TypeScript code in the debugging tools, even though the code running in the browser is JavaScript.
 
-![DevTools]()
+![DevTools](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/src/01.JPG)
 
 #
 **[Back To The Top](#Overview-of-the-Section)**
