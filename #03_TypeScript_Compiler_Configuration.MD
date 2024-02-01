@@ -5,6 +5,10 @@
 * **[Compiling the Entire Project / Multiple Files](#tsc-init)**
 * **[Including & Excluding Files](#including-excluding-files)**
 
+* **[Compiler Options](#compiler-options)**
+
+### 
+
 
 
 
@@ -42,5 +46,15 @@ In summary, ``tsc app.js -w`` is a command that tells the TypeScript Compiler to
 
 - The ``exclude`` section is used to specify files and patterns that should be excluded from compilation.
 - The ``include`` section, when populated, would specify the files that should be explicitly included for compilation. However, since it's empty, TypeScript will include all TypeScript files by default, except those listed in the exclude section.
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
+### Compiler Options
+```
+/* Language and Environment */
+    "target": "es2016",    /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+```
+
+
 #
 **[Back To The Top](#Overview-of-the-Section)**
