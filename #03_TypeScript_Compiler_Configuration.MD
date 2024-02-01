@@ -54,7 +54,15 @@ In summary, ``tsc app.js -w`` is a command that tells the TypeScript Compiler to
 /* Language and Environment */
     "target": "es2016",    /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
 ```
+#
+**[Back To The Top](#Overview-of-the-Section)**
 
+### TypeScript Core Librarys'
+
+In the TypeScript ``tsconfig.json`` file, the ``"lib"`` compiler option is used to specify a set of bundled library declaration files that describe the target runtime environment.
+
+- **[TypeScript - What is a tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)**
+- **[TypeScript - tsc CLI Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)**
 
 #
 **[Back To The Top](#Overview-of-the-Section)**
