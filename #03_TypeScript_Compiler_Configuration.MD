@@ -1,7 +1,7 @@
 <h1 align="center">TypeScript Basics & Basic Types</h1>
 
 ### Overview of the Section
-* **[TypeScript Core Types](#TypeScript-Core-Types)**
+* **[Using "Watch Mode"](#watch-mode)**
 
 
 #
