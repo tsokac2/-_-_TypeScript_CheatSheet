@@ -4,12 +4,8 @@
 * **[Using "Watch Mode"](#watch-mode)**
 * **[Compiling the Entire Project / Multiple Files](#tsc-init)**
 * **[Including & Excluding Files](#including-excluding-files)**
-
 * **[Compiler Options](#compiler-options)**
-
-### 
-
-
+* **[TypeScript Core Librarys'](#core-lib)**
 
 
 ### <a name="watch-mode">Using "Watch Mode"</a>
@@ -55,9 +51,7 @@ In summary, ``tsc app.js -w`` is a command that tells the TypeScript Compiler to
     "target": "es2016",    /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
 ```
 #
-**[Back To The Top](#Overview-of-the-Section)**
-
-### TypeScript Core Librarys'
+### <a name="core-lib">TypeScript Core Librarys'</a>
 
 In the TypeScript ``tsconfig.json`` file, the ``"lib"`` compiler option is used to specify a set of bundled library declaration files that describe the target runtime environment.
 
