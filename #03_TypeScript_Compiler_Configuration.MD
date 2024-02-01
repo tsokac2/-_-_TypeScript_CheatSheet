@@ -6,6 +6,10 @@
 * **[Including & Excluding Files](#including-excluding-files)**
 * **[Compiler Options](#compiler-options)**
 * **[TypeScript Core Librarys'](#core-lib)**
+* **[Working with Source Maps](#working-with-source-maps)**
+
+
+### 
 
 
 ### <a name="watch-mode">Using "Watch Mode"</a>
@@ -57,6 +61,20 @@ In the TypeScript ``tsconfig.json`` file, the ``"lib"`` compiler option is used 
 
 - **[TypeScript - What is a tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)**
 - **[TypeScript - tsc CLI Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)**
+
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
+### Working with Source Maps
+
+**Source Maps**: 
+Source maps are files that establish a mapping between the original TypeScript code and the generated JavaScript code. 
+
+When you set **"sourceMap": true**, you instruct the TypeScript compiler to generate these source maps alongside the compiled JavaScript code.
+
+**Advantages**: Readable Debugging: Source maps provide a seamless debugging experience by allowing developers to work with the original TypeScript code in the debugging tools, even though the code running in the browser is JavaScript.
+
+![DevTools]()
 
 #
 **[Back To The Top](#Overview-of-the-Section)**
