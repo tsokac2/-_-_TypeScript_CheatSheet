@@ -106,6 +106,15 @@ TypeScript, being a superset of JavaScript, introduces strict type-checking opti
 - **Description**: This option helps in ensuring that class properties are always initialized before they are used.
 
 #
+### Debugging with Visual Studio Code
+
+**File - Preferences - Extensions**:
+
+- ESLint
+- Prettier - Code formatter
+- JavaScript Debugger
+
+**[VS Code TS Debugging:](https://code.visualstudio.com/docs/typescript/typescript-debugging)**
+
+
 **[Back To The Top](#Overview-of-the-Section)**
-
-
