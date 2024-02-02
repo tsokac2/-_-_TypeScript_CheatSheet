@@ -96,13 +96,13 @@ In your example, the ``"rootDir"`` is set to ``"./src"``, indicating that the Ty
 
 TypeScript, being a superset of JavaScript, introduces strict type-checking options to enhance the reliability and maintainability of your code.
 
-**strictNullChecks**:
+``strictNullChecks``
 - **Description**: This option is fundamental for avoiding the common issue of ``null`` or undefined values causing unexpected behavior in your code.
 
-**strictBindCallApply**:
+``strictBindCallApply``:
 - **Description**: This option is designed to improve the correctness of function calls and the usage of functions like bind, call, and apply.
 
-**strictPropertyInitialization**:
+``strictPropertyInitialization``
 - **Description**: This option helps in ensuring that class properties are always initialized before they are used.
 
 #
