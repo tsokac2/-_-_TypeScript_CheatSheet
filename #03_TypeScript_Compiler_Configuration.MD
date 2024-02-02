@@ -7,9 +7,7 @@
 * **[Compiler Options](#compiler-options)**
 * **[TypeScript Core Librarys'](#core-lib)**
 * **[Working with Source Maps](#working-with-source-maps)**
-
-
-### 
+* **["rootDir" and "outDir"](#root-dir)**
 
 
 ### <a name="watch-mode">Using "Watch Mode"</a>
@@ -78,3 +76,17 @@ When you set **"sourceMap": true**, you instruct the TypeScript compiler to gene
 
 #
 **[Back To The Top](#Overview-of-the-Section)**
+
+### <a name="root-dir">"rootDir" and "outDir"</a>
+
+### ``"rootDir": "./src"``
+**Explanation**: This option sets the root directory within your source files. 
+
+In your example, the ``"rootDir"`` is set to ``"./src"``, indicating that the TypeScript compiler should consider ``./src`` as the root directory for your TypeScript source files.
+
+### ``"outDir": "./dist"``
+**Explanation**: This option specifies the output directory for all emitted (compiled) files. In your example, the ``"outDir"`` is set to ``"./dist"``, meaning that the compiled JavaScript files will be placed in the dist directory.
+
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
