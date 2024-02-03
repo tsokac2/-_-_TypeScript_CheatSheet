@@ -85,8 +85,6 @@ console.log(addNumbers);
 **[Back To The Top](#Overview-of-the-Section)**
 
 ### <a name="">Array & Object Destructuring</a>
-
-* **[Array & Object Destructuring](#destructuring)**
 Array and Object destructuring are features in JavaScript that allow you to extract values from arrays or properties from objects into distinct variables with a more concise and readable syntax.
 
 **Array Destructuring**:
