@@ -4,7 +4,7 @@
 * **["let" and "const"](#let-const)**
 * **[Arrow Functions](#arrow-functions)**
 * **[Default Function Parameters](#default-function-parameters)**
-
+* **[The Spread Operator (...)](#spread)**
 
 
 
@@ -57,6 +57,29 @@ Default they need to be last in the list of arguments
 const add  = (a: number, b:number = 1) => a + b
 console.log(add(5); // Returns 6)
 ```
+#
+### <a name="spread">The Spread Operator (...)</a>
+```
+const person = {
+  name: "Tom",
+  age: 30
+}
+const newPerson = {...person}; // Perfect copy of a original object
+console.log(newPerson);
+```
+#
+###  Rest Parameters
+Rest parameters, a really useful feature for accepting an unlimited amount of arguments.
 
+```
+const add  = (...numbers: number[]) => {
+  return numbers.reduce((curResult, curValue) => {
+    return curResult + curValue;
+  }, 0);
+};
+
+const addNumbers = add(5, 10, 2, 3.7);
+console.log(addNumbers);
+```
 #
 **[Back To The Top](#Overview-of-the-Section)**
