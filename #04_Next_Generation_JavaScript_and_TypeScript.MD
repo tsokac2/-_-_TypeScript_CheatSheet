@@ -3,6 +3,7 @@
 ### Overview of the Section
 * **["let" and "const"](#let-const)**
 * **[Arrow Functions](#arrow-functions)**
+* **[Default Function Parameters](#default-function-parameters)**
 
 
 
@@ -49,8 +50,13 @@ console.log(add(2,5));
 ``const printOutput: (a:number | string) => void = output => console.log(output)``
 
 #
-**[Back To The Top](#Overview-of-the-Section)**
+### Default Function Parameters
 
+Default they need to be last in the list of arguments
+```
+const add  = (a: number, b:number = 1) => a + b
+console.log(add(5); // Returns 6)
+```
 
 #
 **[Back To The Top](#Overview-of-the-Section)**
