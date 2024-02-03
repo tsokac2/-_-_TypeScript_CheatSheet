@@ -5,7 +5,7 @@
 * **[Arrow Functions](#arrow-functions)**
 * **[Default Function Parameters](#default-function-parameters)**
 * **[The Spread Operator (...)](#spread)**
-
+* **[Array & Object Destructuring](#destructuring)**
 
 
 ### <a name="let-const">"let" and "const"</a>
@@ -82,4 +82,28 @@ const addNumbers = add(5, 10, 2, 3.7);
 console.log(addNumbers);
 ```
 #
+**[Back To The Top](#Overview-of-the-Section)**
+
+### <a name="">Array & Object Destructuring</a>
+
+* **[Array & Object Destructuring](#destructuring)**
+Array and Object destructuring are features in JavaScript that allow you to extract values from arrays or properties from objects into distinct variables with a more concise and readable syntax.
+
+**Array Destructuring**:
+```
+const hobbies = ["Coding", "Movie", "Tom"];
+const [hobbi1, hobbi2, ...remaningHobbies] = hobbies;
+console.log(...remaningHobbies); // Returns "Tom"
+```
+
+**Object Destructuring**:
+It lets you extract properties from an object and assign them to variables with the same name.
+```
+const person = { name: 'Tomislav', age: 30, location: 'Dublin' };
+const { name, age, location } = person;
+
+console.log(name);     // 'Tomislav'
+console.log(age);      // 30
+console.log(location); // 'Dublin'
+```
 **[Back To The Top](#Overview-of-the-Section)**
