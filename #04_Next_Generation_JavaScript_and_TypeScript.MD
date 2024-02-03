@@ -2,6 +2,9 @@
 
 ### Overview of the Section
 * **["let" and "const"](#let-const)**
+* **[Arrow Functions](#arrow-functions)**
+
+
 
 
 ### <a name="let-const">"let" and "const"</a>
@@ -17,9 +20,7 @@ if( age > 15){
 console.log(x) //undefined - fails since let(or const) is outside the if block
 console.log(age) //true since const is outside the if block
 ```
-
 #### ``var``
-
 ```
 var age = 20;
 if( age > 20){
@@ -27,10 +28,30 @@ if( age > 20){
 }
 console.log(x) //true since var is outside the if block
 ```
-
 In JavaScript, variables declared with var are function-scoped, not block-scoped like variables declared with let or const since ES6.
 
 **[Next JavaScript compat-table](https://compat-table.github.io/compat-table/es6/)**
+
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
+### Arrow Functions
+```
+const add = (a:number, b:number) => {
+    return a + b;
+};
+
+console.log(add(2,5));
+```
+**Example with one expresion**
+``const add = (a:number, b:number) => a + b;``
+
+**Example with defining two types - 'number'|'string'**
+``const printOutput: (a:number | string) => void = output => console.log(output)``
+
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
 
 #
 **[Back To The Top](#Overview-of-the-Section)**
