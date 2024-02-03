@@ -40,7 +40,6 @@ In JavaScript, variables declared with var are function-scoped, not block-scoped
 const add = (a:number, b:number) => {
     return a + b;
 };
-
 console.log(add(2,5));
 ```
 **Example with one expresion**
