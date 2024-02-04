@@ -3,14 +3,13 @@
 ### Overview of the Section
 * **[What are Classes?](#classes)**
 
-
 ### <a name="classes">What are Classes?</a>
 
 What's Object-oriented Programming (OOP)?
 
 ![OOP](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/src/02.JPG)
 
-#### Classes & Instances
+### Classes & Instances
 
 ![classes](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/src/03.JPG)
 
@@ -32,3 +31,4 @@ Here are some resources for further learning:
 
 #
 **[Back To The Top](#Overview-of-the-Section)**
+
