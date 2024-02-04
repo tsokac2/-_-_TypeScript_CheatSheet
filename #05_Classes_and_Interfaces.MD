@@ -22,7 +22,6 @@ What's Object-oriented Programming (OOP)?
 - You create an instance using the new keyword followed by the class name.
 - Each instance has its own unique identity and data. Even though they share the same blueprint, their properties and method calls can have different results.
 
-
 Here are some resources for further learning:
 
 - MDN Web Docs: **[Link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class)**
@@ -32,3 +31,28 @@ Here are some resources for further learning:
 #
 **[Back To The Top](#Overview-of-the-Section)**
 
+### Creating a First Class
+
+```
+class Department {
+    name: string;
+
+    constructor(n: string) {
+        this.name = n;
+    }
+}
+const accounting = new Department("Accounting");
+console.log(accounting);
+```
+**Output in the console**:
+```
+Department {name: 'Accounting'}
+name: "Accounting"
+[[Prototype]]: Object
+```
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
+
+#
+**[Back To The Top](#Overview-of-the-Section)**
