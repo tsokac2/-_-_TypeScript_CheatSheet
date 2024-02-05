@@ -4,6 +4,7 @@
 * **[What are Classes?](#classes)**
 * **[Constructor Functions & The "this" Keyword](#this)**
 * **["private" and "public" Access Modifiers](#privat)**
+* **["readonly" Properties](#readonly)**
 
 
 ### <a name="classes">What are Classes?</a>
@@ -98,6 +99,8 @@ class Department {
 
 #
 **[Back To The Top](#Overview-of-the-Section)**
+
+### <a name="readonly">"readonly" Properties</a>
 
 
 #
