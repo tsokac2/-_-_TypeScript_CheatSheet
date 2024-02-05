@@ -4,7 +4,7 @@
 * **[What are Classes?](#classes)**
 * **[Constructor Functions & The "this" Keyword](#this)**
 * **["private" and "public" Access Modifiers](#privat)**
-* **["readonly" Properties](#readonly)**
+* **[Inheritance](#inheritance)**
 
 
 ### <a name="classes">What are Classes?</a>
@@ -100,8 +100,52 @@ class Department {
 #
 **[Back To The Top](#Overview-of-the-Section)**
 
-### <a name="readonly">"readonly" Properties</a>
+### Inheritance
 
+Inheritance in JavaScript classes allows a new class (called a subclass or child class) to inherit properties and methods from an existing class (called a superclass or parent class). 
+
+This promotes code reusability and establishes hierarchical relationships between classes.
+
+**Key concepts**:
+
+- ``extends`` keyword: Used to create a subclass that inherits from a superclass.
+- **Superclass**: The class being inherited from.
+- **Subclass**: The class that inherits from the superclass.
+- **Prototype chain**: A mechanism that JavaScript uses to look for properties and methods in inherited classes.
+
+```
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  eat() {
+    console.log(`${this.name} is eating.`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); // Calls the constructor of the superclass
+    this.breed = breed;
+  }
+
+  bark() {
+    console.log(`${this.name} the ${this.breed} barks!`);
+  }
+}
+
+const myDog = new Dog("Fido", "Labrador");
+myDog.eat();   // Output: Fido is eating. (Inherited from Animal)
+myDog.bark();  // Output: Fido the Labrador barks! (Specific to Dog)
+```
+
+**Key points**:
+
+- The subclass inherits all properties and methods from the superclass.
+- The subclass can add its own properties and methods.
+- The subclass can override inherited methods by defining methods with the same name.
+- The ``super`` keyword is used to call superclass methods or access superclass properties from within the subclass.
 
 #
 **[Back To The Top](#Overview-of-the-Section)**
