@@ -3,6 +3,7 @@
 ### Overview of the Section
 * **[What are Classes?](#classes)**
 * **[Constructor Functions & The "this" Keyword](#this)**
+* **["private" and "public" Access Modifiers](#privat)**
 
 
 ### <a name="classes">What are Classes?</a>
@@ -56,6 +57,48 @@ name: "Accounting"
 **[Back To The Top](#Overview-of-the-Section)**
 
 ### <a name="this">Constructor Functions & The "this" Keyword</a>
+
+```
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.greet = function() {
+    console.log("Hello, my name is " + this.name);
+  };
+}
+
+const person1 = new Person("Alice", 30);
+person1.greet(); // Output: "Hello, my name is Alice"
+
+const person2 = new Person("Bob", 25);
+person2.greet(); // Output: "Hello, my name is Bob"
+```
+
+In this example, the ``Person`` constructor function creates objects with ``name`` and ``age`` properties, and a ``greet`` method. Each object (``person1`` and ``person2``) has its own ``name`` and ``age`` values, and calling ``greet`` on them prints their unique names.
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
+### <a name="privat">"private" and "public" Access Modifiers</a>
+
+```
+class Department {
+
+    name: string;
+    private employees: string[] = []; // not accessible outside the calss scope
+
+    constructor(n:string){
+        this.name = n;
+    }
+}
+```
+
+- The ``private`` keyword before ``employees`` ensures that the list of employees can only be accessed and modified within the class itself, promoting data protection.
+
+- This class structure helps organize employee information within departments and enforces data privacy.
+
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
 
 #
 **[Back To The Top](#Overview-of-the-Section)**
