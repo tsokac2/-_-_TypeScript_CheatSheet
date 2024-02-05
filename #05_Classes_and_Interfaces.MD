@@ -2,6 +2,8 @@
 
 ### Overview of the Section
 * **[What are Classes?](#classes)**
+* **[Constructor Functions & The "this" Keyword](#this)**
+
 
 ### <a name="classes">What are Classes?</a>
 
@@ -53,6 +55,7 @@ name: "Accounting"
 #
 **[Back To The Top](#Overview-of-the-Section)**
 
+### <a name="this">Constructor Functions & The "this" Keyword</a>
 
 #
 **[Back To The Top](#Overview-of-the-Section)**
