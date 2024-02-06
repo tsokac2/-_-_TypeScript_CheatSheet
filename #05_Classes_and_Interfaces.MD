@@ -8,7 +8,9 @@
 * **[Inheritance](#inheritance)**
 * **[Overriding Properties & The "protected" Modifier](#protected)**
 * **[Getters "get" and  Setters "set"](#get-set)**
-
+* **[Interface](#interface)**
+* **[Using Interfaces with Classes](#interface-classes)**
+* **[More on TS Interfaces](https://www.typescriptlang.org/docs/handbook/2/objects.html)**
 
 ### <a name="classes">What are Classes?</a>
 What's Object-oriented Programming (OOP)?
@@ -164,14 +166,11 @@ class Employee extends Person {
   }
 }
 ```
-
 **Key Points**:
-
 - Overriding properties in TypeScript involves redefining them in subclasses.
 - The ``protected`` modifier restricts access to members within a class and its subclasses.
 - These features are primarily for type checking and language features within TypeScript; transpiled JavaScript relies on prototype-based inheritance.
 - Consider using TypeScript's private fields for stronger encapsulation within classes.
-
 #
 **[Back To The Top](#Overview-of-the-Section)**
 
@@ -212,6 +211,69 @@ console.log(person.name); // Outputs "Mary"
 #
 **[Back To The Top](#Overview-of-the-Section)**
 
+### Interface
 
+In TypeScript, an interface is a way to define a contract or a shape for an object. 
+
+It allows you to specify the structure of an object, including the types of its properties and methods. 
+
+#### Declaration:
+You declare an interface using the ``interface`` keyword, followed by the interface name.
+```
+interface Person {
+    name: string;
+    age: number;
+    greet(): void;
+}
+```
+
+#### Implementing an Interface:
+Once an interface is defined, you can implement it in a class. The class must adhere to the structure specified by the interface.
+```
+class Employee implements Person {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello, my name is ${this.name}.`);
+    }
+}
+```
+In summary, interfaces in TypeScript provide a way to define and enforce the structure of objects, ensuring that your code is more predictable and less error-prone. 
 #
+**[Back To The Top](#Overview-of-the-Section)**
+
+### <a name="interface-classes">Using Interfaces with Classes</a>
+
+In TypeScript, interfaces play a crucial role in defining contracts for classes. 
+ 
+When you use interfaces with classes, you essentially establish a blueprint for the structure that a class must adhere to. 
+
+```
+interface Greetable {
+  name:string;
+  greet(phrase:string):void;
+}
+
+class Person implements Greetable {
+  name: string; // every calass has to have "name"
+  age = 30;
+
+  constructor(n:string) {
+    this.name = n;
+  }
+
+  greet(phrase: string): void { // every calass has to have greet() method
+  console.log(phrase + ' ' + this.name)
+  }
+}
+
+const res = new Person("Tomislav");
+res.greet("Hi there: ");
+```
 **[Back To The Top](#Overview-of-the-Section)**
