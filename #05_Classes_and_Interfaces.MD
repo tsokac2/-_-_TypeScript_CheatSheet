@@ -2,15 +2,15 @@
 
 ### Overview of the Section
 * **[What are Classes?](#classes)**
+* **[Creating a First Class](#creating-a-first-class)**
+* **[Constructor Functions & The "this" Keyword](#this)**
+
 
 ### <a name="classes">What are Classes?</a>
-
 What's Object-oriented Programming (OOP)?
-
 ![OOP](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/src/02.JPG)
 
 ### Classes & Instances
-
 ![classes](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/src/03.JPG)
 
 **Classes**:
@@ -53,6 +53,7 @@ name: "Accounting"
 #
 **[Back To The Top](#Overview-of-the-Section)**
 
+### <a name="this">Constructor Functions & The "this" Keyword</a>
 
 #
 **[Back To The Top](#Overview-of-the-Section)**
