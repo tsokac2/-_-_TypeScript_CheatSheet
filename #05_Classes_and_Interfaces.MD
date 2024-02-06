@@ -7,9 +7,7 @@
 * **["private" and "public" Access Modifiers](#privat-public)**
 * **[Inheritance](#inheritance)**
 * **[Overriding Properties & The "protected" Modifier](#protected)**
-
-
-
+* **[Getters "get" and  Setters "set"](#get-set)**
 
 
 ### <a name="classes">What are Classes?</a>
@@ -177,3 +175,43 @@ class Employee extends Person {
 #
 **[Back To The Top](#Overview-of-the-Section)**
 
+### <a name="get-set">"get" and "set"</a>
+
+#### Getters:
+- Defined using the ``get`` keyword within a class definition.
+- Act as functions that are called automatically when you try to read a property.
+
+#### Setters:
+- Defined using the ``set`` keyword within a class definition.
+- Act as functions that are called automatically when you try to assign a value to a property.
+
+#### Here's an example:
+```
+class Person {
+  constructor(name) {
+    this._name = name;
+  }
+
+  get name() {
+    return this._name.toUpperCase(); // Customize returned value
+  }
+
+  set name(newName) {
+    if (newName.length < 3) {
+      throw new Error("Name must be at least 3 characters long"); // Validation
+    }
+    this._name = newName;
+  }
+}
+
+const person = new Person("john");
+console.log(person.name); // Outputs "JOHN" (using getter)
+person.name = "Mary"; // Triggers setter for validation
+console.log(person.name); // Outputs "Mary"
+```
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
+
+#
+**[Back To The Top](#Overview-of-the-Section)**
