@@ -3,6 +3,9 @@
 ### Overview of the Section
 * **[Built-in Generics & What are Generics](#generics)**
 
+* **[Typestack - Class-Validator NPM](https://www.npmjs.com/package/typescript-class-validator)**
+* **[Typestack - Class-Validator GitHub](https://github.com/typestack/class-validator)**
+
 
 ### A First Class Decorator
 Explain me a first class decorator in TypeScript with a code example and best use-cases?
