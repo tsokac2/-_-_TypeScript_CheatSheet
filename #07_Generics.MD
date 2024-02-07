@@ -21,10 +21,10 @@ Show me an example of "keyof" with a code example and when is good pratice to us
 Explain me generic classes in TypeScript with a code example and point out all important details in connection with generic classes?
 
 ### Generic Utility Types
-
-
+Explain me some generic utility types in TypeScript with code examples and tell me where we can use them?
 
 ### Generic Types vs Union Types
+
 
 ### 
 
