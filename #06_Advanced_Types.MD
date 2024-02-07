@@ -3,10 +3,15 @@
 ### Overview of the Section
 * **[Intersection Types](#intersection-types)**
 * **[More on Type Guards](#more-on-type-guards)**
+* **[Discriminated Unions](#discriminated-unions)**
+* **[Type Casting](#type-casting)**
+* **[Index Properties](#index-properties)**
+* **[Function Overloads](#function-overloads)**
+* **[Optional Chaining](#optional-chaining)**
+* **[Nullish Coalescing](#nullish-coalescing)**
 
-
+#
 ### Intersection Types
-
 - Intersection types allow you to combine multiple types into a single new type.
 - You can use the & symbol to combine types.
 - Intersection types are useful for creating complex object types from existing types.
@@ -122,30 +127,224 @@ useVehicle(truck); // Outputs: "Driving a truck" and "Loading cargo plus 100"
 #
 **[Back To The Top](#Overview-of-the-Section)**
 
-
-
-If you can do something with the type beofre you can use it.
-
 ### Discriminated Unions
-Show me some examples of Discriminated Unions in Typescript with a code example?
 
-### Type Casting
-Explain me Type Casting in TypeScript with code example?
+- **Discriminated unions**: A pattern for type safety when working with object literals in union types.
+- **Key idea**: Add a common "type" property to each object literal in the union, indicating its specific type (e.g., "bird" or "horse").
+- **Benefits**:
+    - **Type safety**: Ensures you access only valid properties based on the object's type.
+    - **Autocompletion**: IDEs suggest valid properties based on the "type" value.
+    - **No typos**: TypeScript catches typos in the "type" value preventing runtime errors.
 
-### Index Properties
-Describe Index Properties in TypeScript with code example?
+**Simple Code Example**:
+```
+interface Bird {
+  type: "bird";
+  flyingSpeed: number;
+}
 
-### Function Overloads
-Show me an example of Function Overloads in TypeScript with a code example and explain me what it is?
+interface Horse {
+  type: "horse";
+  runningSpeed: number;
+}
 
-### Optional Chaining
-Explain me Optional Chaining in TypeScript with a code example and explain me what it is?
+type Animal = Bird | Horse;
 
-### Nullish Coalescing
-Explain me a Nullish Coalescing in TypeScript with a code example and explain me what it is?
+function moveAnimal(animal: Animal): void {
+  let speed: number;
+  switch (animal.type) {
+    case "bird":
+      speed = animal.flyingSpeed;
+      break;
+    case "horse":
+      speed = animal.runningSpeed;
+      break;
+    default:
+      throw new Error("Invalid animal type");
+  }
+  console.log(`Moving at speed ${speed}`);
+}
 
+const bird: Bird = { type: "bird", flyingSpeed: 20 };
+moveAnimal(bird); // Output: Moving at speed 20
 
-
+const horse: Horse = { type: "horse", runningSpeed: 30 };
+moveAnimal(horse); // Output: Moving at speed 30
+```
+This example demonstrates how a discriminated union ensures type safety and provides better developer experience while working with animal objects.
 
 #
+**[Back To The Top](#Overview-of-the-Section)**
+
+### Type Casting
+
+- **Discriminated Unions**: A powerful construct in TypeScript that allows representing values with different shapes based on a specific property that distinguishes them.
+
+- **Type Casting**: A mechanism to manually tell TypeScript that a value has a specific type even if it can't be inferred automatically.
+
+- **Use Cases**:
+    - When TypeScript lacks enough information to infer the correct type (e.g., selecting elements from the DOM).
+    - When working with external libraries or code that doesn't provide accurate type information.
+
+- **Syntax**:
+    - as ``<type>`` (before the expression)
+    - ``<type>`` (angle brackets, often preferred in React due to JSX collision concerns)
+
+- **Limitations**:
+    - Not a substitute for sound type-based development.
+    - Use it judiciously to avoid runtime errors and maintain type safety.
+    - Ensure the cast is valid or TypeScript won't catch potential issues.
+
+**Code Example**:
+```
+// DOM example using angle brackets syntax
+const paragraph = document.querySelector<HTMLParagraphElement>('p');
+// Now you can safely access paragraph-specific properties and methods:
+paragraph.textContent = 'Hello, world!';
+
+// Input element example using "as" syntax
+const userInputElement = document.getElementById('user-input') as HTMLInputElement;
+// TypeScript knows it's an input and allows accessing value:
+const userValue = userInputElement.value;
+
+// Remember to handle potential null values appropriately for safety.
+```
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
+### Index Properties
+
+- **Index Types**: TypeScript's index types empower you to create flexible objects where property names and their number are unknown beforehand. These properties must have the specified value type (e.g., string, number).
+
+- **Benefits**:
+    - Enable dynamic data structures that adapt to various input scenarios.
+    - Simplify code for handling objects with uncertain property keys.
+    - Provide type safety even in flexible scenarios.
+
+- **Use Cases**:
+    - Validating user input with different error messages for diverse fields.
+    - Storing dynamic data retrieved from APIs or user interactions.
+    - Creating collections where property names vary.
+
+**Simple Code Example**:
+```
+interface ErrorContainer {
+  [key: string]: string; // Index type: property names are strings, values are strings
+}
+
+// Create an error container
+const errorBag: ErrorContainer = {};
+
+// Add errors dynamically
+errorBag.email = "Not a valid email";
+errorBag.username = "Must start with a capital character";
+
+// Use the error container
+for (const [key, value] of Object.entries(errorBag)) {
+  console.error(`Error in ${key}: ${value}`);
+}
+```
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
+### Function Overloads
+
+- **Function Overload**: In TypeScript, function overloads allow defining multiple function signatures with the same name but different parameter types and return types. This enables the function to handle various parameter combinations and provide type-safe behavior.
+- **Motivatio**: Function overloads address limitations in type inference when a function can return different types based on input. They clarify return types to TypeScript, prevent type errors, and improve code readability.
+- **Synta**: Define overloads by writing function declarations with specific parameter types and return types above the main function implementation. Each overload must have a semicolon.
+- **Flexibility**: You can have different numbers of parameters and types in each overload, as long as the function logic handles them correctly.
+- **Example**: The ``add`` function demonstrates overloads for handling combinations of numbers and strings, ensuring proper type inference for various inputs.
+
+**Code Example**:
+```
+function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+function add(a: any, b: any): any {
+  if (typeof a === 'number' && typeof b === 'number') {
+    return a + b;
+  } else if (typeof a === 'string' && typeof b === 'string') {
+    return a + ' ' + b;
+  } else {
+    // Handle other combinations or throw an error if desired
+    throw new Error('Unsupported argument types');
+  }
+}
+
+const result1 = add(1, 2); // result1 is inferred as number (5)
+const result2 = add('hello', 'world'); // result2 is inferred as string ("hello world")
+// const result3 = add(1, 'hello'); // This call would throw an error if not handled
+
+console.log(result1); // Output: 5
+console.log(result2); // Output: hello world
+// console.log(result3); // Would throw an error if not handled
+```
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
+### Optional Chaining
+
+- **Optional chaining operator ``(?.)``**: Introduced in TypeScript 3.7, it allows safe access to nested properties, even if intermediate ones are undefined or null.
+- **Avoiding runtime errors**: When using optional chaining, if a property is undefined, the expression stops and returns undefined instead of throwing an error.
+- **Use cases**: Ideal for working with data from external sources where you're unsure about its structure or completeness.
+- **Example**: ``fetchedUserData?.job?.title`` accesses ``title`` only if ``fetchedUserData`` and ``job`` are defined.
+
+**Simple Code Example**:
+```
+interface User {
+  id: number;
+  name: string;
+  job?: {
+    title: string;
+    description: string;
+  };
+}
+
+function getUserJobTitle(user: User): string | undefined {
+  return user?.job?.title;
+}
+
+const userData: User = {
+  id: 1,
+  name: "John Doe",
+};
+
+const jobTitle = getUserJobTitle(userData); // undefined (no job property)
+
+console.log(jobTitle); // Output: undefined
+
+// Example with job property
+userData.job = {
+  title: "Software Engineer",
+  description: "Building awesome things",
+};
+
+const newJobTitle = getUserJobTitle(userData); // "Software Engineer"
+
+console.log(newJobTitle); // Output: "Software Engineer"
+```
+#
+**[Back To The Top](#Overview-of-the-Section)**
+
+### Nullish Coalescing
+
+- **Nullish Coalescing Operator ``(??)``**: This operator provides a fallback value if the left operand is null or undefined.
+- **Difference from Logical OR ``(||)``**: The ``||`` operator considers other falsy values like empty strings and 0 as false, while ``??`` only treats null and undefined as falsy.
+- **Use Cases**: Use ``??`` to provide default values while preserving non-nullish falsy values like empty strings and zeros.
+
+**Simple Code Example**:
+```
+let userInput: string | null = null; // Could be null or a string
+
+let storedData = userInput ?? "DEFAULT"; // Use "DEFAULT" if userInput is nullish
+
+console.log(storedData); // Output: DEFAULT
+
+userInput = ""; // Now userInput is an empty string
+
+storedData = userInput ?? "DEFAULT"; // No fallback, storedData keeps the empty string
+
+console.log(storedData); // Output: ""
+```
+This code demonstrates how the ``??`` operator preserves the empty string input while providing a default value for ``null`` and ``undefined``.
+
 **[Back To The Top](#Overview-of-the-Section)**
