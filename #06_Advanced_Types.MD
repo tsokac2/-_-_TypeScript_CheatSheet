@@ -25,7 +25,16 @@ Explain me Type Casting in TypeScript with code example?
 ### Index Properties
 Describe Index Properties in TypeScript with code example?
 
-### 
+### Function Overloads
+Show me an example of Function Overloads in TypeScript with a code example and explain me what it is?
+
+### Optional Chaining
+Explain me Optional Chaining in TypeScript with a code example and explain me what it is?
+
+### Nullish Coalescing
+Explain me a Nullish Coalescing in TypeScript with a code example and explain me what it is?
+
+
 
 
 #
