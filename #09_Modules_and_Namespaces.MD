@@ -95,5 +95,37 @@ namespace MyNamespace {
 6. **Recommendation for ES6 Modules**: 
 - The author recommends using ES6 modules due to their advantages, such as explicit imports and automatic handling by modern browsers. 
 - They mention that this approach helps avoid potential issues that could arise with the previous namespace-based approach.
+
+Below is a simplified example of using ES6 modules in TypeScript. Let's consider two modules: ``mathOperations.ts`` and ``app.ts``.
+
+#### mathOperations.ts:
+```
+// mathOperations.ts
+export function add(a: number, b: number): number {
+    return a + b;
+}
+
+export function subtract(a: number, b: number): number {
+    return a - b;
+}
+```
+#### app.ts:
+```
+// app.ts
+import { add, subtract } from './mathOperations';
+
+const resultAddition = add(10, 5);
+console.log(`Result of addition: ${resultAddition}`);
+
+const resultSubtraction = subtract(20, 8);
+console.log(`Result of subtraction: ${resultSubtraction}`);
+```
+
+#### Include the compiled JavaScript files in an HTML file:
+```
+<!-- index.html -->
+<script type="module" src="mathOperations.js"></script>
+<script type="module" src="app.js"></script>
+```
 #
 **[Back To The Top](#Overview-of-the-Section)**
