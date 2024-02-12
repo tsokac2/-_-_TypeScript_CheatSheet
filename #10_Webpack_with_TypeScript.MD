@@ -4,8 +4,7 @@
 * **[What is Webpack & Why do we need it?](#webpack)**
 * **[Installing Webpack & Important Dependencies](#install)**
 * **[Adding a Production Workflow](#production)**
-
-https://webpack.js.org/
+* **[Webpack.js.org](https://webpack.js.org/)**
 
 #
 ### <a name="webpack">What is Webpack & Why do we need it?</a>
