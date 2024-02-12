@@ -18,7 +18,7 @@ Webpack helps you build cleaner, more efficient, and maintainable JavaScript app
 - **Modern features**: Webpack can handle modern JavaScript features like ES6 modules and transpile them into formats compatible with older browsers.
 #
 
-![]()
+![webpack](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/src/04.JPG)
 
 **[Back To The Top](#Overview-of-the-Section)**
 
