@@ -3,6 +3,7 @@
 ### Overview of the Section
 * **[Writing Module Code - Your Options](#options)**
 * **[Namespaces](#namespaces)**
+* **[ES Modules](#es-modules)**
 
 #
 ### <a name="options">Writing Module Code - Your Options</a>
@@ -94,6 +95,5 @@ namespace MyNamespace {
 6. **Recommendation for ES6 Modules**: 
 - The author recommends using ES6 modules due to their advantages, such as explicit imports and automatic handling by modern browsers. 
 - They mention that this approach helps avoid potential issues that could arise with the previous namespace-based approach.
-
 #
 **[Back To The Top](#Overview-of-the-Section)**
