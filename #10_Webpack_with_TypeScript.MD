@@ -99,7 +99,7 @@ module.exports = {
 
 ### <a name="production">Adding a Production Workflow</a>
 
-####
+#### package.json
 ```
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
