@@ -3,6 +3,9 @@
 ### Overview of the Section
 * **[What is Webpack & Why do we need it?](#webpack)**
 * **[Installing Webpack & Important Dependencies](#install)**
+* **[Adding a Production Workflow](#production)**
+
+https://webpack.js.org/
 
 #
 ### <a name="webpack">What is Webpack & Why do we need it?</a>
@@ -40,7 +43,7 @@ npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-load
 #
 **[Back To The Top](#Overview-of-the-Section)**
 
-### 
+### <a name="install">Installing Webpack & Important Dependencies</a>
 
 1. **tsconfig.json Configuration**:
 - It's good that you are configuring the ``tsconfig.json`` file. Setting the target to either ``es5`` or ``es6`` depends on your target browser compatibility. It's a crucial decision, especially if you have specific browser requirements.
@@ -95,7 +98,7 @@ module.exports = {
 #
 **[Back To The Top](#Overview-of-the-Section)**
 
-###  Adding a Production Workflow
+### <a name="production">Adding a Production Workflow</a>
 
 ####
 ```
