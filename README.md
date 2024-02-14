@@ -1,6 +1,10 @@
 <h1 align="center">TypeScript CheatSheet</h1>
 
-### [Getting Started](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/Getting_Started.md)
+* **[Getting Started](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/Getting_Started.md)**
+* **[TypeScript Basics & Basic Types](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2302_TypeScript%20Basics%20%26%20Basic%20Types.MD)**
+* **[TypeScript Compiler](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2303_TypeScript_Compiler_Configuration.MD)**
+
+#
 
 Before we jump into the specifics, let's begin with the basics. If you're new to TypeScript, start here to get an overview of what TypeScript is and how to set up your development environment.
 

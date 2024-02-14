@@ -1,4 +1,4 @@
-<h1 align="center">TypeScript Basics & Basic Types</h1>
+<h1 align="center">TypeScript Compiler</h1>
 
 ### Overview of the Section
 * **[Using "Watch Mode"](#watch-mode)**
