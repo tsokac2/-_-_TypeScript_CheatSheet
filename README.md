@@ -1,8 +1,18 @@
 <h1 align="center">TypeScript CheatSheet</h1>
 
-* **[Getting Started](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/Getting_Started.md)**
+* **[Getting Started](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2301_Getting_Started.MD)**
 * **[TypeScript Basics & Basic Types](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2302_TypeScript%20Basics%20%26%20Basic%20Types.MD)**
 * **[TypeScript Compiler](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2303_TypeScript_Compiler_Configuration.MD)**
+* **[Next Generation JavaScript & TypeScript](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2304_Next_Generation_JavaScript_and_TypeScript.MD)**
+* **[Classes & Interfaces](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2305_Classes_and_Interfaces.MD)**
+* **[Advanced Types](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2306_Advanced_Types.MD)**
+* **[Generics](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2307_Generics.MD)**
+* **[Decorators](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2308_Decorators.MD)**
+
+
+
+
+
 
 #
 

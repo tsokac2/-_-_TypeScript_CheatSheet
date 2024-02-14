@@ -1,4 +1,4 @@
-<h1 align="center">Generics</h1>
+<h1 align="center">Decorators</h1>
 
 ### Overview of the Section
 * **[First Class Decorator](#first-class-decorator)**
