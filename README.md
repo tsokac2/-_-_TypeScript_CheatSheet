@@ -8,14 +8,10 @@
 * **[Advanced Types](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2306_Advanced_Types.MD)**
 * **[Generics](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2307_Generics.MD)**
 * **[Decorators](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2308_Decorators.MD)**
-
-
-
-
-
+* **[Modules & Namespaces](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2309_Modules_and_Namespaces.MD)**
+* **[Webpack with TypeScript](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/%2310_Webpack_with_TypeScript.MD)**
 
 #
-
 Before we jump into the specifics, let's begin with the basics. If you're new to TypeScript, start here to get an overview of what TypeScript is and how to set up your development environment.
 
 ### [TypeScript Basics & Basic Types](https://github.com/tsokac2/-_-_TypeScript_CheatSheet/blob/main/TypeScript%20Basics%20%26%20Basic%20Types.md)
